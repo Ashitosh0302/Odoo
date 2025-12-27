@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const EquipmentSchema = new mongoose.Schema(
 {
@@ -48,4 +48,4 @@ const EquipmentSchema = new mongoose.Schema(
     timestamps: true
 });
 
-module.exports = mongoose.model("Equipment", EquipmentSchema);
+export default mongoose.model("Equipment", EquipmentSchema);

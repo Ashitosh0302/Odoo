@@ -1,4 +1,4 @@
-import MaintenanceRequest from "../maintenanceRequest/request.model.js";
+import MaintenanceRequest from "../maintananceRequest/request.model.js";
 
 export const requestsByTeam = async () => {
   return await MaintenanceRequest.aggregate([

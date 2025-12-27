@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import { fetchEquipment } from "../api/equipment.api.js";
+import { getEquipment } from "../api/equipment.api.js";
 
 export default function Equipment() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetchEquipment().then(setData);
+    getEquipment().then(setData);
   }, []);
 
   return (

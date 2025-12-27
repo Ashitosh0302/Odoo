@@ -1,6 +1,6 @@
 const Joi = require("joi");
 
-const equipmentValidationSchema = Joi.object({
+export const equipmentValidationSchema = Joi.object({
 
   name: Joi.string()
     .min(3)
@@ -55,7 +55,7 @@ const equipmentValidationSchema = Joi.object({
     .default(false)
 });
 
-const validateEquipment = (req, res, next) => {
+export const validateEquipment = (req, res, next) => {
   const { error, value } = equipmentValidationSchema.validate(req.body, {
     abortEarly: false,
     stripUnknown: true
@@ -72,6 +72,3 @@ const validateEquipment = (req, res, next) => {
   next();
 };
 
-module.exports = {
-  validateEquipment
-};

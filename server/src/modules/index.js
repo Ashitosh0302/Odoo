@@ -1,15 +1,16 @@
-import calendarRoute from "./calendar/calendar.routes.js";
-import equipmentRoute from "./equipment/equipment.routes.js";
-import MRRoute from "./maintenanceRequest/request.routes.js";
-import MTRoute from "./maintenanceTeam/team.routes.js";
-import reportsRoute from "./reports/report.routes.js";
-import userRoute from "./users/user.routes.js";
+// src/modules/index.js
+import calendarRoutes from "./calendar/calendar.routes.js";
+import equipmentRoutes from "./equipment/equipment.routes.js";
+import maintenanceRequestRoutes from "./maintananceRequest/request.routes.js";
+import maintenanceTeamRoutes from "./maintananceTeam/team.routes.js";
+import reportRoutes from "./reports/report.routes.js";
+import userRoutes from "./users/user.routes.js";
 
 export const registerModules = (app) => {
-  app.use("/api/calendar", calendarRoute);
-  app.use("/api/equipment", equipmentRoute);
-  app.use("/api/maintenance-requests", MRRoute);
-  app.use("/api/maintenance-teams", MTRoute);
-  app.use("/api/reports", reportsRoute);
-  app.use("/api/users", userRoute);
+  app.use("/api/calendar", calendarRoutes);
+  app.use("/api/equipment", equipmentRoutes);
+  app.use("/api/maintenance-requests", maintenanceRequestRoutes);
+  app.use("/api/maintenance-teams", maintenanceTeamRoutes);
+  app.use("/api/reports", reportRoutes);
+  app.use("/api/users", userRoutes);
 };
