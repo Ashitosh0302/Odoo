@@ -1,18 +1,17 @@
-const Team = require("./team.model");
+import Team from "./team.model.js";
 
-const CREATE_TEAM = async(data) =>
+const CREATE_TEAM = async (data) =>
 {
     return await Team.create(data);
 };
 
-const GET_ALL_TEAMS = async() =>
+const GET_ALL_TEAMS = async () =>
 {
     return await Team.find();
 };
 
-module.exports =
+export
 {
     CREATE_TEAM,
     GET_ALL_TEAMS
 };
-
