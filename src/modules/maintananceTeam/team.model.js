@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const MaintenanceTeamSchema = new mongoose.Schema(
 {
@@ -18,5 +18,4 @@ const MaintenanceTeamSchema = new mongoose.Schema(
     timestamps: true
 });
 
-module.exports = mongoose.model("MaintenanceTeam", MaintenanceTeamSchema);
-
+export default mongoose.model("MaintenanceTeam", MaintenanceTeamSchema);
